@@ -1,8 +1,10 @@
+const commonPaths = require('./common-paths');
+
 const config = {
   entry: './src/index.js',
   output: {
-    path: __dirname + '/dist',
     filename: 'bundle.js',
+    path: commonPaths.outputPath,
   },
 };
 
