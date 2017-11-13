@@ -4,11 +4,18 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "build:watch:dev": "npm run build -- --env.env=dev",
-    "build:watch:prod": "npm run build -- --env.env=prod",
+    "build:watch:dev": "npm run build:watch -- --env.env=dev",
+    "build:watch:prod": "npm run build:watch -- --env.env=prod",
     "build:watch": "npm run build -- --watch",
-    "build:prod:bundleanalyze": "npm run build:dev -- --env.addons=bundleanalyze",
+
+    "build:prod:firstplugin": "npm run build:prod -- --env.addons=firstplugin",
+    "build:prod:bundleanalyze": "npm run build:prod -- --env.addons=bundleanalyze",
+    "build:prod": "npm run build -- --env.env=prod",
+
     "build:dev": "npm run build -- --env.env=dev",
+
+    "build:allAddons": "npm run build:prod -- --env.addons=bundleanalyze --env.addons=firstplugin",
+
     "build": "webpack --verbose"
   },
   "keywords": [],
