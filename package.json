@@ -4,7 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "watch": "npm run build -- --watch",
+    "build:log": "npm run build -- --env=1",
+    "build:watch": "npm run build -- --watch",
     "build": "webpack --verbose"
   },
   "keywords": [],
