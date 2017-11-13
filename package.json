@@ -4,7 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "build:log": "npm run build -- --env=1",
+    "build:watch:dev": "npm run build -- --env.env=dev",
+    "build:watch:prod": "npm run build -- --env.env=prod",
     "build:watch": "npm run build -- --watch",
     "build": "webpack --verbose"
   },
@@ -13,6 +14,7 @@
   "license": "ISC",
   "devDependencies": {
     "webpack": "^3.8.1",
-    "webpack-dev-server": "^2.9.4"
+    "webpack-dev-server": "^2.9.4",
+    "webpack-merge": "^4.1.1"
   }
 }
