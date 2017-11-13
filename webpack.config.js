@@ -10,6 +10,10 @@ const addons = (addonsArg) => {
 };
 
 module.exports = (env) => {
+  if (!env) {
+    throw new Error('You must pass an --env flag into your build for webpack to work !');
+  }
+
   console.log(env);
 
   const envConfig = require(`./build-utils/webpack.${env.env}`);
