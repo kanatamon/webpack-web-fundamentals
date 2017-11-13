@@ -7,6 +7,8 @@
     "build:watch:dev": "npm run build -- --env.env=dev",
     "build:watch:prod": "npm run build -- --env.env=prod",
     "build:watch": "npm run build -- --watch",
+    "build:prod:bundleanalyze": "npm run build:dev -- --env.addons=bundleanalyze",
+    "build:dev": "npm run build -- --env.env=dev",
     "build": "webpack --verbose"
   },
   "keywords": [],
@@ -14,6 +16,7 @@
   "license": "ISC",
   "devDependencies": {
     "webpack": "^3.8.1",
+    "webpack-bundle-analyzer": "^2.9.1",
     "webpack-dev-server": "^2.9.4",
     "webpack-merge": "^4.1.1"
   }
