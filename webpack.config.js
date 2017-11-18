@@ -14,11 +14,8 @@ module.exports = (env) => {
     throw new Error('You must pass an --env flag into your build for webpack to work !');
   }
 
-  console.log(env);
-
   const envConfig = require(`./build-utils/webpack.${env.env}`);
   const mergedConfig = webpackMerge(commonConfig, envConfig, ...addons(env.addons));
 
-  console.log(mergedConfig);
   return mergedConfig;
 };

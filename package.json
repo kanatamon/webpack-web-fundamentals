@@ -4,18 +4,18 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "build:watch:dev": "npm run build:watch -- --env.env=dev",
-    "build:watch:prod": "npm run build:watch -- --env.env=prod",
-    "build:watch": "npm run build -- --watch",
+    "build:watch:dev": "yarn build:watch -- --env.env=dev",
+    "build:watch:prod": "yarn build:watch -- --env.env=prod",
+    "build:watch": "yarn build -- --watch",
 
-    "build:prod:firstplugin": "npm run build:prod -- --env.addons=firstplugin",
-    "build:prod:bundleanalyze": "npm run build:prod -- --env.addons=bundleanalyze",
-    "build:prod": "npm run build -- --env.env=prod",
-    "debug:prod": "npm run debug -- --env.env=prod",
+    "build:prod:firstplugin": "yarn build:prod -- --env.addons=firstplugin",
+    "build:prod:bundleanalyze": "yarn build:prod -- --env.addons=bundleanalyze",
+    "build:prod": "yarn build -- --env.env=prod",
+    "debug:prod": "yarn debug -- --env.env=prod",
 
-    "build:dev": "npm run build -- --env.env=dev",
+    "build:dev": "yarn build -- --env.env=dev",
 
-    "build:allAddons": "npm run build:prod -- --env.addons=bundleanalyze --env.addons=firstplugin",
+    "build:allAddons": "yarn build:prod -- --env.addons=bundleanalyze --env.addons=firstplugin",
 
     "debug": "node --inspect --debug-brk ./node_modules/webpack/bin/webpack.js",
     "build": "node ./node_modules/webpack/bin/webpack.js"
